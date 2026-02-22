@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { FaBars, FaTimes, FaChevronDown } from 'react-icons/fa'
 import { motion, AnimatePresence } from 'framer-motion'
+import { servicesNav, solutionsNav, industriesNav } from '@/data/navigation'
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
@@ -17,29 +18,8 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  const services = [
-    { name: 'Web Development', href: '/services/web-development' },
-    { name: 'Mobile App Development', href: '/services/mobile-app' },
-    { name: 'Software Development', href: '/services/software-development' },
-    { name: 'AI & ML Solutions', href: '/services/ai-ml' },
-    { name: 'Digital Marketing', href: '/services/digital-marketing' },
-  ]
 
-  const solutions = [
-    { name: 'Restaurant Management', href: '/solutions/restaurant-management' },
-    { name: 'CRM Development', href: '/solutions/crm' },
-    { name: 'E-Commerce Software', href: '/solutions/ecommerce' },
-    { name: 'School Management', href: '/solutions/school-management' },
-  ]
 
-  const industries = [
-    { name: 'Fintech', href: '/industries/fintech' },
-    { name: 'Healthcare', href: '/industries/healthcare' },
-    { name: 'E-Commerce', href: '/industries/ecommerce' },
-    { name: 'Education', href: '/industries/education' },
-    { name: 'Real Estate', href: '/industries/real-estate' },
-    { name: 'Travel & Tourism', href: '/industries/travel' },
-  ]
 
   return (
     <nav
@@ -82,7 +62,7 @@ export default function Navbar() {
                     exit={{ opacity: 0, y: 10 }}
                     className="absolute top-full left-0 mt-2 w-64 bg-white shadow-xl rounded-lg overflow-hidden"
                   >
-                    {services.map((service) => (
+                    {servicesNav.map((service) => (
                       <Link
                         key={service.href}
                         href={service.href}
@@ -114,7 +94,7 @@ export default function Navbar() {
                     exit={{ opacity: 0, y: 10 }}
                     className="absolute top-full left-0 mt-2 w-64 bg-white shadow-xl rounded-lg overflow-hidden"
                   >
-                    {solutions.map((solution) => (
+                    {solutionsNav.map((solution) => (
                       <Link
                         key={solution.href}
                         href={solution.href}
@@ -146,7 +126,7 @@ export default function Navbar() {
                     exit={{ opacity: 0, y: 10 }}
                     className="absolute top-full left-0 mt-2 w-64 bg-white shadow-xl rounded-lg overflow-hidden"
                   >
-                    {industries.map((industry) => (
+                    {industriesNav.map((industry) => (
                       <Link
                         key={industry.href}
                         href={industry.href}
@@ -220,7 +200,7 @@ export default function Navbar() {
                   </button>
                   {activeDropdown === 'services' && (
                     <div className="pl-4 space-y-2">
-                      {services.map((service) => (
+                      {servicesNav.map((service) => (
                         <Link
                           key={service.href}
                           href={service.href}
@@ -249,7 +229,7 @@ export default function Navbar() {
                   </button>
                   {activeDropdown === 'solutions' && (
                     <div className="pl-4 space-y-2">
-                      {solutions.map((solution) => (
+                      {solutionsNav.map((solution) => (
                         <Link
                           key={solution.href}
                           href={solution.href}
@@ -278,7 +258,7 @@ export default function Navbar() {
                   </button>
                   {activeDropdown === 'industries' && (
                     <div className="pl-4 space-y-2">
-                      {industries.map((industry) => (
+                      {industriesNav.map((industry) => (
                         <Link
                           key={industry.href}
                           href={industry.href}

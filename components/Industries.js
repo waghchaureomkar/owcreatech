@@ -5,35 +5,9 @@ import { Autoplay, Navigation, Pagination } from 'swiper/modules'
 import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
+import { industries, industriesStats } from '@/data/industries'
 
 export default function Industries() {
-  const industries = [
-    { name: 'Fintech', icon: '💰', description: 'Financial technology solutions' },
-    { name: 'Healthcare', icon: '🏥', description: 'Medical & health services' },
-    { name: 'E-Commerce', icon: '🛒', description: 'Online retail platforms' },
-    { name: 'Education', icon: '🎓', description: 'E-learning solutions' },
-    { name: 'Real Estate', icon: '🏢', description: 'Property management' },
-    { name: 'Travel & Tourism', icon: '✈️', description: 'Booking & management' },
-    { name: 'Food & Beverage', icon: '🍽️', description: 'Restaurant & delivery' },
-    { name: 'Transportation', icon: '🚗', description: 'Logistics & mobility' },
-    { name: 'Retail', icon: '🏪', description: 'Point of sale systems' },
-    { name: 'Banking', icon: '🏦', description: 'Digital banking solutions' },
-    { name: 'Insurance', icon: '🛡️', description: 'Policy management' },
-    { name: 'Media & Entertainment', icon: '🎬', description: 'Content platforms' },
-    { name: 'Manufacturing', icon: '🏭', description: 'Industrial automation' },
-    { name: 'Agriculture', icon: '🌾', description: 'AgriTech solutions' },
-    { name: 'Energy', icon: '⚡', description: 'Power management' },
-    { name: 'Telecom', icon: '📱', description: 'Communication services' },
-    { name: 'Gaming', icon: '🎮', description: 'Game development' },
-    { name: 'Fashion', icon: '👔', description: 'Apparel & accessories' },
-    { name: 'Sports & Fitness', icon: '⚽', description: 'Health & wellness' },
-    { name: 'Legal', icon: '⚖️', description: 'Legal tech solutions' },
-    { name: 'Government', icon: '🏛️', description: 'Public sector systems' },
-    { name: 'Non-Profit', icon: '🤝', description: 'NGO management' },
-    { name: 'Hospitality', icon: '🏨', description: 'Hotel management' },
-    { name: 'Automotive', icon: '🚙', description: 'Vehicle technology' },
-    { name: 'Pharma', icon: '💊', description: 'Pharmaceutical systems' },
-  ]
 
   return (
     <section className="section-padding bg-white">
@@ -124,12 +98,7 @@ export default function Industries() {
           transition={{ delay: 0.4 }}
           className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6"
         >
-          {[
-            { value: '25+', label: 'Industries' },
-            { value: '500+', label: 'Industry Experts' },
-            { value: '1500+', label: 'Projects Delivered' },
-            { value: '100%', label: 'Domain Coverage' },
-          ].map((stat, index) => (
+          {industriesStats.map((stat, index) => (
             <div key={index} className="text-center p-4 bg-gradient-to-br from-orange-50 to-blue-50 rounded-lg">
               <h4 className="text-3xl font-bold text-gradient mb-2">{stat.value}</h4>
               <p className="text-gray-600 font-medium">{stat.label}</p>

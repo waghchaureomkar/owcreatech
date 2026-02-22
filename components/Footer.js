@@ -1,60 +1,12 @@
 import Link from 'next/link'
 import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram, FaYoutube, FaPinterest, FaPhone, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa'
+import { offices, contactInfo } from '@/data/company'
+import { servicesNav, quickLinks, socialLinks } from '@/data/navigation'
+
+const socialIcons = [FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram, FaYoutube, FaPinterest]
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
-
-  const offices = [
-    {
-      location: 'Jaipur (Headquarters)',
-      address: '2-Shiv Vihar-A, New Sanganer Road, Mansarovar, Jaipur, Rajasthan',
-      phone: '+91 7230001612',
-      flag: '🇮🇳'
-    },
-    {
-      location: 'Gurugram',
-      address: '1701A, Magnum Global Park, Sector 58, Gurugram, Haryana',
-      phone: '+91 7230001613',
-      flag: '🇮🇳'
-    },
-    {
-      location: 'London, UK',
-      address: '71-75 Shelton Street, Covent Garden, London, WC2H 9JQ',
-      phone: '+44 7956982975',
-      flag: '🇬🇧'
-    },
-    {
-      location: 'Dubai, UAE',
-      address: 'Office 1105 A, Trio Tower, Al Barsha, Dubai',
-      phone: '+971 525410937',
-      flag: '🇦🇪'
-    }
-  ]
-
-  const services = [
-    { name: 'Web Development', href: '/services/web-development' },
-    { name: 'Mobile App Development', href: '/services/mobile-app' },
-    { name: 'Software Development', href: '/services/software-development' },
-    { name: 'AI & ML Solutions', href: '/services/ai-ml' },
-    { name: 'Digital Marketing', href: '/services/digital-marketing' },
-  ]
-
-  const quickLinks = [
-    { name: 'About Us', href: '/about' },
-    { name: 'Portfolio', href: '/portfolio' },
-    { name: 'Career', href: '/career' },
-    { name: 'Blog', href: '/blog' },
-    { name: 'Contact Us', href: '/contact' },
-  ]
-
-  const socialLinks = [
-    { icon: FaFacebookF, href: 'https://facebook.com', label: 'Facebook' },
-    { icon: FaTwitter, href: 'https://twitter.com', label: 'Twitter' },
-    { icon: FaLinkedinIn, href: 'https://linkedin.com', label: 'LinkedIn' },
-    { icon: FaInstagram, href: 'https://instagram.com', label: 'Instagram' },
-    { icon: FaYoutube, href: 'https://youtube.com', label: 'YouTube' },
-    { icon: FaPinterest, href: 'https://pinterest.com', label: 'Pinterest' },
-  ]
 
   return (
     <footer className="bg-gray-900 text-gray-300">
@@ -76,18 +28,21 @@ export default function Footer() {
 
               {/* Social Links */}
               <div className="flex space-x-3">
-                {socialLinks.map((social) => (
-                  <a
-                    key={social.label}
-                    href={social.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-10 h-10 bg-gray-800 hover:bg-primary-orange rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110"
-                    aria-label={social.label}
-                  >
-                    <social.icon className="text-white" />
-                  </a>
-                ))}
+                {socialLinks.map((social, index) => {
+                  const Icon = socialIcons[index]
+                  return (
+                    <a
+                      key={social.label}
+                      href={social.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-10 h-10 bg-gray-800 hover:bg-primary-orange rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110"
+                      aria-label={social.label}
+                    >
+                      <Icon className="text-white" />
+                    </a>
+                  )
+                })}
               </div>
             </div>
 
@@ -113,7 +68,7 @@ export default function Footer() {
             <div>
               <h4 className="text-lg font-semibold text-white mb-4">Our Services</h4>
               <ul className="space-y-2">
-                {services.map((service) => (
+                {servicesNav.map((service) => (
                   <li key={service.href}>
                     <Link
                       href={service.href}
@@ -134,14 +89,15 @@ export default function Footer() {
                 <li className="flex items-start space-x-3">
                   <FaPhone className="text-primary-orange mt-1 flex-shrink-0" />
                   <div>
-                    <p className="text-gray-400">India: +91 7230001612</p>
-                    <p className="text-gray-400">UK: +44 7956982975</p>
+                    {contactInfo.phones.slice(0, 2).map((p) => (
+                      <p key={p.label} className="text-gray-400">{p.label}: {p.number}</p>
+                    ))}
                   </div>
                 </li>
                 <li className="flex items-start space-x-3">
                   <FaEnvelope className="text-primary-orange mt-1 flex-shrink-0" />
-                  <a href="mailto:info@ezulix.com" className="text-gray-400 hover:text-primary-orange">
-                    info@ezulix.com
+                  <a href={`mailto:${contactInfo.emails[0]}`} className="text-gray-400 hover:text-primary-orange">
+                    {contactInfo.emails[0]}
                   </a>
                 </li>
                 <li className="flex items-start space-x-3">
@@ -155,7 +111,7 @@ export default function Footer() {
               <div className="mt-4">
                 <p className="text-sm text-gray-500">
                   <strong className="text-white">Business Hours:</strong><br />
-                  Monday - Friday: 10:00 AM to 07:00 PM
+                  {contactInfo.businessHours}
                 </p>
               </div>
             </div>

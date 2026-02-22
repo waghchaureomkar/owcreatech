@@ -1,34 +1,8 @@
 'use client'
 import { motion } from 'framer-motion'
-import { FaProjectDiagram, FaUsers, FaAward, FaClock } from 'react-icons/fa'
+import { stats } from '@/data/stats'
 
 export default function Stats() {
-  const stats = [
-    {
-      icon: FaClock,
-      value: '10+',
-      label: 'Years Experience',
-      color: 'from-orange-500 to-red-500'
-    },
-    {
-      icon: FaProjectDiagram,
-      value: '1500+',
-      label: 'Projects Delivered',
-      color: 'from-blue-500 to-indigo-500'
-    },
-    {
-      icon: FaUsers,
-      value: '95%',
-      label: 'Client Retention',
-      color: 'from-green-500 to-emerald-500'
-    },
-    {
-      icon: FaAward,
-      value: '99%',
-      label: 'Expert Team',
-      color: 'from-purple-500 to-pink-500'
-    }
-  ]
 
   return (
     <section className="section-padding bg-gradient-to-br from-gray-50 to-white">

@@ -5,6 +5,8 @@ import { useForm } from 'react-hook-form'
 import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaWhatsapp } from 'react-icons/fa'
 import { useState } from 'react'
 import { sendEmail } from '@/lib/emailjs'
+import { offices, contactInfo } from '@/data/company'
+import { serviceOptions } from '@/data/services'
 
 export default function Contact() {
   const [isSubmitted, setIsSubmitted] = useState(false)
@@ -34,32 +36,6 @@ export default function Contact() {
     }
   }
 
-  const offices = [
-    {
-      location: 'Jaipur (Headquarters)',
-      address: '2-Shiv Vihar-A, New Sanganer Road, Mansarovar, Jaipur, Rajasthan',
-      phone: '+91 7230001612',
-      flag: '🇮🇳'
-    },
-    {
-      location: 'Gurugram',
-      address: '1701A, Magnum Global Park, Sector 58, Gurugram, Haryana',
-      phone: '+91 7230001613',
-      flag: '🇮🇳'
-    },
-    {
-      location: 'London, UK',
-      address: '71-75 Shelton Street, Covent Garden, London, WC2H 9JQ',
-      phone: '+44 7956982975',
-      flag: '🇬🇧'
-    },
-    {
-      location: 'Dubai, UAE',
-      address: 'Office 1105 A, Trio Tower, Al Barsha, Dubai',
-      phone: '+971 525410937',
-      flag: '🇦🇪'
-    }
-  ]
 
   return (
     <main>
@@ -149,11 +125,7 @@ export default function Contact() {
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-orange focus:outline-none"
                     >
                       <option value="">Select a service</option>
-                      <option value="web">Web Development</option>
-                      <option value="mobile">Mobile App Development</option>
-                      <option value="software">Software Development</option>
-                      <option value="ai">AI & ML Solutions</option>
-                      <option value="marketing">Digital Marketing</option>
+                      {serviceOptions.map((opt) => (<option key={opt.value} value={opt.value}>{opt.label}</option>))}
                     </select>
                   </div>
 
@@ -202,9 +174,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-1">Phone</h3>
-                    <p className="text-gray-600">India: +91 7230001612</p>
-                    <p className="text-gray-600">UK: +44 7956982975</p>
-                    <p className="text-gray-600">UAE: +971 525410937</p>
+                    {contactInfo.phones.map((p) => (<p key={p.label} className="text-gray-600">{p.label}: {p.number}</p>))}
                   </div>
                 </div>
 
@@ -214,8 +184,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-1">Email</h3>
-                    <p className="text-gray-600">info@ezulix.com</p>
-                    <p className="text-gray-600">support@ezulix.com</p>
+                    {contactInfo.emails.map((email) => (<p key={email} className="text-gray-600">{email}</p>))}
                   </div>
                 </div>
 
@@ -225,7 +194,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-1">WhatsApp</h3>
-                    <p className="text-gray-600">+91 7230001612</p>
+                    <p className="text-gray-600">{contactInfo.whatsapp}</p>
                   </div>
                 </div>
               </div>
@@ -233,7 +202,7 @@ export default function Contact() {
               {/* Business Hours */}
               <div className="bg-gradient-to-br from-orange-50 to-blue-50 p-6 rounded-xl">
                 <h3 className="font-bold text-gray-900 mb-3">Business Hours</h3>
-                <p className="text-gray-700">Monday - Friday: 10:00 AM to 07:00 PM</p>
+                <p className="text-gray-700">{contactInfo.businessHours}</p>
                 <p className="text-gray-600 text-sm mt-2">We respond to all inquiries within 24 hours</p>
               </div>
             </div>

@@ -2,29 +2,14 @@ import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import FloatingPanel from '@/components/FloatingPanel'
 import Link from 'next/link'
+import { team, smartValues } from '@/data/team'
+import { statsSimple } from '@/data/stats'
+import { aboutContent, aboutMetadata } from '@/data/content'
 
-export const metadata = {
-  title: 'About Us - OW CreaTech',
-  description: 'Learn about OW CreaTech - Leading software development company since 2015',
-}
+export const metadata = aboutMetadata
 
 export default function About() {
-  const team = [
-    { name: 'Arvind Saini', role: 'Founder & CEO', emoji: '👨‍💼' },
-    { name: 'Mahesh Sharma', role: 'Founder & MD', emoji: '👨‍💻' },
-    { name: 'Software Team', role: 'Development Manager', emoji: '💻' },
-    { name: 'Android Team', role: 'Mobile Lead', emoji: '📱' },
-    { name: 'Creative Team', role: 'Design Head', emoji: '🎨' },
-    { name: 'Marketing Team', role: 'Digital Marketing', emoji: '📊' },
-  ]
 
-  const values = [
-    { letter: 'S', word: 'Simplify', description: 'We simplify complex problems' },
-    { letter: 'M', word: 'Managerial', description: 'Expert management approach' },
-    { letter: 'A', word: 'Authentic', description: 'Genuine and transparent' },
-    { letter: 'R', word: 'Reliable', description: 'You can count on us' },
-    { letter: 'T', word: 'Time-Bound', description: 'Delivered on schedule' },
-  ]
 
   return (
     <main>
@@ -41,9 +26,7 @@ export default function About() {
               <span className="font-light bg-gradient-to-r from-primary-blue to-blue-600 bg-clip-text text-transparent" style={{ fontFamily: "'Museo Moderno', sans-serif" }}>CreaTech</span>
             </h1>
             <p className="text-xl text-gray-600 leading-relaxed">
-              Established in 2015, OW CreaTech started as a web development company
-              in Jaipur and evolved into a comprehensive IT solutions provider serving multiple
-              industries including e-commerce, fintech, and digital marketing.
+              {aboutContent.background}
             </p>
           </div>
         </div>
@@ -57,9 +40,7 @@ export default function About() {
               <div className="text-5xl mb-4">🎯</div>
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Mission</h2>
               <p className="text-gray-600 leading-relaxed">
-                We commit to using innovation to help clients' enterprises flourish,
-                emphasizing cutting-edge solutions and customer satisfaction. Our goal
-                is to deliver transformative technology that drives real business results.
+                {aboutContent.mission}
               </p>
             </div>
 
@@ -67,9 +48,7 @@ export default function About() {
               <div className="text-5xl mb-4">🚀</div>
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Vision</h2>
               <p className="text-gray-600 leading-relaxed">
-                To become India's top software firm by supporting clients' digital
-                transformation and providing competitive advantages through innovative
-                technology solutions and exceptional service delivery.
+                {aboutContent.vision}
               </p>
             </div>
           </div>
@@ -87,7 +66,7 @@ export default function About() {
           </div>
 
           <div className="grid md:grid-cols-5 gap-6">
-            {values.map((value, index) => (
+            {smartValues.map((value, index) => (
               <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2">
                 <div className="w-16 h-16 bg-gradient-to-br from-primary-orange to-primary-blue rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4">
                   {value.letter}
@@ -104,12 +83,7 @@ export default function About() {
       <section className="section-padding bg-white">
         <div className="container-custom">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {[
-              { value: '1500+', label: 'Projects Delivered' },
-              { value: '10+', label: 'Years Experience' },
-              { value: '95%', label: 'Client Retention' },
-              { value: '99%', label: 'Expert Team' },
-            ].map((stat, index) => (
+            {statsSimple.map((stat, index) => (
               <div key={index} className="text-center">
                 <h3 className="text-5xl font-bold text-gradient mb-2">{stat.value}</h3>
                 <p className="text-gray-600 font-medium">{stat.label}</p>

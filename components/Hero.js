@@ -2,6 +2,7 @@
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { FaRocket, FaCheckCircle } from 'react-icons/fa'
+import { heroFeaturePoints } from '@/data/stats'
 
 export default function Hero() {
   const fadeInUp = {
@@ -65,11 +66,7 @@ export default function Hero() {
               variants={fadeInUp}
               className="space-y-3 mb-8"
             >
-              {[
-                '10+ Years of Experience',
-                '1500+ Projects Delivered',
-                '95% Client Retention Rate',
-              ].map((feature, index) => (
+              {heroFeaturePoints.map((feature, index) => (
                 <div key={index} className="flex items-center space-x-3 justify-center lg:justify-start">
                   <FaCheckCircle className="text-green-500 text-xl flex-shrink-0" />
                   <span className="text-gray-700 font-medium">{feature}</span>

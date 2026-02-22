@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { FaTimes, FaEnvelope, FaUser, FaPhone, FaComment } from 'react-icons/fa'
 import { useForm } from 'react-hook-form'
 import { sendEmail } from '@/lib/emailjs'
+import { serviceOptions } from '@/data/services'
 
 export default function FloatingPanel() {
   const [isOpen, setIsOpen] = useState(false)
@@ -207,12 +208,7 @@ export default function FloatingPanel() {
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-orange"
                       >
                         <option value="">Select a service</option>
-                        <option value="web-development">Web Development</option>
-                        <option value="mobile-app">Mobile App Development</option>
-                        <option value="software-development">Software Development</option>
-                        <option value="ai-ml">AI & ML Solutions</option>
-                        <option value="digital-marketing">Digital Marketing</option>
-                        <option value="other">Other</option>
+                        {serviceOptions.map((opt) => (<option key={opt.value} value={opt.value}>{opt.label}</option>))}
                       </select>
                     </div>
 

@@ -1,10 +1,7 @@
 import './globals.css'
+import { siteMetadata } from '@/data/content'
 
-export const metadata = {
-  title: 'OW CreaTech - Software Development Company',
-  description: 'Leading software, web, and mobile app development company offering AI-powered solutions',
-  keywords: 'software development, web development, mobile app development, AI solutions, custom software',
-}
+export const metadata = siteMetadata
 
 export default function RootLayout({ children }) {
   return (
