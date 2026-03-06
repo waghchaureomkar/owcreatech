@@ -150,7 +150,7 @@ export default function CareerPage() {
                     </div>
                   </div>
                   <Link
-                    href="/contact"
+                    href="/career/apply"
                     className="btn-primary flex-shrink-0 text-center"
                   >
                     Apply Now
@@ -170,7 +170,7 @@ export default function CareerPage() {
             We're always open to passionate people. Send us your resume and we'll reach out when the right opportunity comes up.
           </p>
           <Link
-            href="/contact"
+            href="/career/apply"
             className="bg-white text-primary-orange px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block"
           >
             Send Your Resume

@@ -1,13 +1,13 @@
 export const offices = [
   {
     location: 'Mumbai (Headquarters)',
-    address: '2-Shiv Vihar-A, New Sanganer Road, Mansarovar, Jaipur, Rajasthan',
-    phone: '+91 7700000001',
+    address: 'Office 302, Solitaire Corporate Park, Andheri East, Mumbai, Maharashtra 400093',
+    phone: '+91 7230001612',
     flag: '🇮🇳'
   },
   {
     location: 'Pune',
-    address: '1701A, Magnum Global Park, Sector 58, Gurugram, Haryana',
+    address: 'Office 215, Cerebrum IT Park, Kalyani Nagar, Pune, Maharashtra 411014',
     phone: '+91 7700000002',
     flag: '🇮🇳'
   },
