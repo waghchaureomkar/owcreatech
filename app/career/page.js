@@ -2,62 +2,14 @@ import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import FloatingPanel from '@/components/FloatingPanel'
 import Link from 'next/link'
+import { jobOpenings } from '@/data/careers'
 
 export const metadata = {
   title: 'Careers | OW CreaTech',
   description: 'Join the OW CreaTech team! Explore exciting career opportunities in software development, design, digital marketing, and more.',
 }
 
-const openings = [
-  {
-    title: 'Full Stack Developer',
-    type: 'Full Time',
-    location: 'Jaipur / Remote',
-    experience: '2–4 Years',
-    skills: ['React', 'Node.js', 'PostgreSQL', 'REST APIs'],
-    emoji: '💻',
-  },
-  {
-    title: 'React Native Developer',
-    type: 'Full Time',
-    location: 'Jaipur / Remote',
-    experience: '1–3 Years',
-    skills: ['React Native', 'JavaScript', 'Firebase', 'REST APIs'],
-    emoji: '📱',
-  },
-  {
-    title: 'UI/UX Designer',
-    type: 'Full Time',
-    location: 'Jaipur',
-    experience: '1–3 Years',
-    skills: ['Figma', 'Adobe XD', 'Prototyping', 'User Research'],
-    emoji: '🎨',
-  },
-  {
-    title: 'Digital Marketing Executive',
-    type: 'Full Time',
-    location: 'Jaipur',
-    experience: '1–2 Years',
-    skills: ['SEO', 'Google Ads', 'Meta Ads', 'Content Marketing'],
-    emoji: '📢',
-  },
-  {
-    title: 'Business Development Executive',
-    type: 'Full Time',
-    location: 'Jaipur / Gurugram',
-    experience: '1–3 Years',
-    skills: ['Lead Generation', 'Client Communication', 'Sales', 'CRM'],
-    emoji: '🤝',
-  },
-  {
-    title: 'PHP / Laravel Developer',
-    type: 'Full Time',
-    location: 'Jaipur',
-    experience: '2–4 Years',
-    skills: ['PHP', 'Laravel', 'MySQL', 'REST APIs'],
-    emoji: '🐘',
-  },
-]
+const openings = jobOpenings.filter((job) => job.active)
 
 const perks = [
   { icon: '💰', title: 'Competitive Salary', description: 'Industry-best compensation packages with performance bonuses and annual increments.' },
@@ -149,12 +101,14 @@ export default function CareerPage() {
                       </div>
                     </div>
                   </div>
-                  <Link
-                    href="/career/apply"
+                  <a
+                    href={job.formUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="btn-primary flex-shrink-0 text-center"
                   >
                     Apply Now
-                  </Link>
+                  </a>
                 </div>
               </div>
             ))}

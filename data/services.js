@@ -1,4 +1,4 @@
-import { FaLaptopCode, FaMobileAlt, FaRobot, FaBullhorn, FaShoppingCart, FaDatabase } from 'react-icons/fa'
+import { FaLaptopCode, FaMobileAlt, FaPaintBrush, FaBullhorn, FaShoppingCart, FaDatabase } from 'react-icons/fa'
 
 // Service cards (used in Services component)
 export const services = [
@@ -17,10 +17,10 @@ export const services = [
     color: 'from-purple-500 to-pink-500'
   },
   {
-    icon: FaRobot,
-    title: 'AI & ML Solutions',
-    description: 'Intelligent automation and machine learning solutions to transform your business operations.',
-    link: '/services/ai-ml',
+    icon: FaPaintBrush,
+    title: 'Logo & Graphic Design',
+    description: 'Creative logo design, brand identity, and graphic design solutions that make your brand stand out.',
+    link: '/services/graphics-design',
     color: 'from-orange-500 to-red-500'
   },
   {

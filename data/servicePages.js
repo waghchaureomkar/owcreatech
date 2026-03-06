@@ -265,6 +265,44 @@ export const servicePages = [
       { question: 'Can you integrate the app with existing systems?', answer: 'Yes, we can integrate with your existing ERP, CRM, accounting software, and third-party logistics providers via APIs.' },
     ],
   },
+  {
+    slug: 'ecommerce',
+    title: 'E-Commerce Development',
+    metaDescription: 'Custom e-commerce website and app development with secure payments, inventory management, and seamless shopping experiences. OW CreaTech builds scalable online stores.',
+    hero: {
+      headline: 'E-Commerce Development Services',
+      subheading: 'We build powerful, conversion-optimized online stores and marketplaces — from custom storefronts to full-scale multi-vendor platforms.',
+    },
+    subServices: [
+      { icon: '🛍️', title: 'Custom Online Store', description: 'Fully custom e-commerce websites built from scratch with unique UI/UX tailored to your brand and audience.' },
+      { icon: '🏪', title: 'Multi-Vendor Marketplace', description: 'Amazon/Flipkart-style marketplace platforms with separate vendor dashboards, commissions, and product management.' },
+      { icon: '📱', title: 'E-Commerce Mobile App', description: 'Native iOS and Android shopping apps with push notifications, wishlists, and smooth checkout experiences.' },
+      { icon: '💳', title: 'Payment Gateway Integration', description: 'Seamless integration with Razorpay, Stripe, PayPal, Paytm, UPI, and international payment gateways.' },
+      { icon: '📦', title: 'Inventory & Order Management', description: 'Real-time inventory tracking, automated stock alerts, order processing, and returns management systems.' },
+      { icon: '🔗', title: 'Third-Party Integrations', description: 'Integration with Shopify, WooCommerce, shipping providers (Shiprocket, Delhivery), ERP, and CRM systems.' },
+    ],
+    process: [
+      { step: 1, title: 'Business Analysis', description: 'We understand your product catalog, target audience, and business model to define the ideal store architecture.' },
+      { step: 2, title: 'UI/UX Design', description: 'Conversion-focused design with intuitive navigation, mobile-first layouts, and fast checkout flows.' },
+      { step: 3, title: 'Development', description: 'Build the store with product management, cart, checkout, payment, and admin panel — all integrated.' },
+      { step: 4, title: 'Testing & Optimization', description: 'Performance testing, cross-browser/device testing, and conversion rate optimization before launch.' },
+      { step: 5, title: 'Launch & Support', description: 'Go live with SEO setup, analytics integration, and ongoing maintenance and feature upgrades.' },
+    ],
+    techStack: ['Next.js', 'React', 'Node.js', 'WooCommerce', 'Shopify', 'PHP / Laravel', 'MySQL', 'MongoDB', 'Razorpay', 'Stripe', 'AWS S3', 'Redis'],
+    whyUs: [
+      { icon: '🚀', title: 'Conversion-First Design', description: 'Every design decision is optimized to reduce cart abandonment and increase completed purchases.' },
+      { icon: '🔒', title: 'Secure Transactions', description: 'PCI-compliant payment flows, SSL encryption, and fraud protection built into every store we deliver.' },
+      { icon: '📈', title: 'Scalable Infrastructure', description: 'Built to handle traffic spikes during sales events — from 100 to 1 lakh+ concurrent users.' },
+      { icon: '📊', title: 'Analytics & Insights', description: 'Real-time sales dashboards, customer behaviour analytics, and inventory reports out of the box.' },
+    ],
+    faqs: [
+      { question: 'What platform do you use for e-commerce — Shopify or custom?', answer: 'It depends on your needs. For quick launch, we recommend Shopify or WooCommerce. For complex custom requirements — multiple vendors, custom workflows, or deep integrations — we build fully custom solutions.' },
+      { question: 'How long does it take to build an e-commerce website?', answer: 'A basic online store takes 4–6 weeks. A full multi-vendor marketplace with mobile apps typically takes 3–5 months depending on features.' },
+      { question: 'Which payment gateways do you integrate?', answer: 'We integrate all major gateways — Razorpay, Stripe, PayPal, Paytm, PhonePe, UPI, and international options. We handle the complete payment flow including refunds and payouts.' },
+      { question: 'Can you migrate my existing store to a new platform?', answer: 'Yes, we handle complete e-commerce migrations — products, orders, customers, and SEO — with minimal downtime and full data integrity.' },
+      { question: 'Do you build mobile apps for e-commerce?', answer: 'Yes, we build native React Native or Flutter shopping apps for iOS and Android, fully integrated with your web store backend.' },
+    ],
+  },
 ]
 
 export function getServiceBySlug(slug) {

@@ -103,7 +103,7 @@ export default function Footer() {
                 <li className="flex items-start space-x-3">
                   <FaMapMarkerAlt className="text-primary-orange mt-1 flex-shrink-0" />
                   <p className="text-gray-400">
-                    Jaipur, Gurugram, London, Dubai
+                    Mumabi, Pune, Dubai
                   </p>
                 </li>
               </ul>

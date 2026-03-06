@@ -1,13 +1,18 @@
 'use client'
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
-import { FaBars, FaTimes, FaChevronDown } from 'react-icons/fa'
+import { FaBars, FaTimes, FaChevronDown, FaMoon, FaSun } from 'react-icons/fa'
 import { motion, AnimatePresence } from 'framer-motion'
+import { useTheme } from 'next-themes'
 import { servicesNav, solutionsNav, industriesNav, companyNav } from '@/data/navigation'
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
+  const [mounted, setMounted] = useState(false)
+  const { theme, setTheme } = useTheme()
+
+  useEffect(() => { setMounted(true) }, [])
   const [activeDropdown, setActiveDropdown] = useState(null)
 
   useEffect(() => {
@@ -38,7 +43,7 @@ export default function Navbar() {
             <span className="text-2xl md:text-3xl font-black tracking-tight" style={{ fontFamily: "'Museo Moderno', sans-serif" }}>
               <span className="bg-gradient-to-r from-primary-orange to-orange-600 bg-clip-text text-transparent">OW</span>
               <span className="text-gray-800"> </span>
-              <span className="bg-gradient-to-r from-primary-blue to-blue-600 bg-clip-text text-transparent font-light">CreaTech</span>
+              <span className="bg-gradient-to-r from-primary-blue to-blue-600 bg-clip-text text-transparent font-black">CreaTech</span>
             </span>
           </Link>
 
@@ -91,15 +96,37 @@ export default function Navbar() {
             <Link href="/contact" className="text-gray-700 hover:text-primary-orange transition-colors">
               Contact
             </Link>
+
+            {/* Theme Toggle - Desktop */}
+            {mounted && (
+              <button
+                onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+                className="w-9 h-9 flex items-center justify-center rounded-full border border-gray-200 text-gray-600 hover:border-primary-orange hover:text-primary-orange transition-all"
+                aria-label="Toggle dark mode"
+              >
+                {theme === 'dark' ? <FaSun className="text-sm" /> : <FaMoon className="text-sm" />}
+              </button>
+            )}
           </div>
 
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden text-2xl text-gray-700 focus:outline-none"
-          >
-            {isOpen ? <FaTimes /> : <FaBars />}
-          </button>
+          {/* Mobile: Theme Toggle + Hamburger */}
+          <div className="lg:hidden flex items-center gap-3">
+            {mounted && (
+              <button
+                onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+                className="w-9 h-9 flex items-center justify-center rounded-full border border-gray-200 text-gray-600 hover:border-primary-orange hover:text-primary-orange transition-all"
+                aria-label="Toggle dark mode"
+              >
+                {theme === 'dark' ? <FaSun className="text-sm" /> : <FaMoon className="text-sm" />}
+              </button>
+            )}
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="text-2xl text-gray-700 focus:outline-none"
+            >
+              {isOpen ? <FaTimes /> : <FaBars />}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Menu */}
@@ -111,20 +138,20 @@ export default function Navbar() {
               exit={{ opacity: 0, height: 0 }}
               className="lg:hidden bg-white border-t border-gray-200"
             >
-              <div className="px-4 py-6 space-y-4">
+              <div className="px-5 py-6 space-y-5">
                 <Link
                   href="/"
                   onClick={() => setIsOpen(false)}
-                  className="block text-gray-700 hover:text-primary-orange transition-colors"
+                  className="block text-gray-700 hover:text-primary-orange transition-colors py-1"
                 >
                   Home
                 </Link>
 
                 {dropdowns.map(({ key, label, items }) => (
-                  <div key={key} className="space-y-2">
+                  <div key={key} className="space-y-1">
                     <button
                       onClick={() => setActiveDropdown(activeDropdown === key ? null : key)}
-                      className="flex items-center justify-between w-full text-gray-700"
+                      className="flex items-center justify-between w-full text-gray-700 py-1"
                     >
                       <span>{label}</span>
                       <FaChevronDown
@@ -134,13 +161,13 @@ export default function Navbar() {
                       />
                     </button>
                     {activeDropdown === key && (
-                      <div className="pl-4 space-y-2">
+                      <div className="pl-4 space-y-1 pt-1">
                         {items.map((item) => (
                           <Link
                             key={item.href}
                             href={item.href}
                             onClick={() => setIsOpen(false)}
-                            className="block text-gray-600 hover:text-primary-orange py-1"
+                            className="block text-gray-600 hover:text-primary-orange py-2 leading-snug"
                           >
                             {item.name}
                           </Link>
@@ -153,21 +180,21 @@ export default function Navbar() {
                 <Link
                   href="/technology"
                   onClick={() => setIsOpen(false)}
-                  className="block text-gray-700 hover:text-primary-orange transition-colors"
+                  className="block text-gray-700 hover:text-primary-orange transition-colors py-1"
                 >
                   Technology
                 </Link>
                 <Link
                   href="/portfolio"
                   onClick={() => setIsOpen(false)}
-                  className="block text-gray-700 hover:text-primary-orange transition-colors"
+                  className="block text-gray-700 hover:text-primary-orange transition-colors py-1"
                 >
                   Portfolio
                 </Link>
                 <Link
                   href="/contact"
                   onClick={() => setIsOpen(false)}
-                  className="block text-gray-700 hover:text-primary-orange transition-colors"
+                  className="block text-gray-700 hover:text-primary-orange transition-colors py-1"
                 >
                   Contact
                 </Link>

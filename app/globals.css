@@ -58,6 +58,60 @@ html {
   }
 }
 
+/* ===== DARK MODE ===== */
+html.dark body {
+  background-color: #0f172a;
+  color: #e2e8f0;
+}
+
+/* Backgrounds */
+html.dark .bg-white { background-color: #1e293b !important; }
+html.dark .bg-gray-50 { background-color: #0f172a !important; }
+html.dark .bg-gray-100 { background-color: #1e293b !important; }
+html.dark section.bg-white { background-color: #1e293b !important; }
+
+/* Navbar */
+html.dark nav { background-color: #1e293b !important; }
+html.dark nav.bg-white\/95 { background-color: rgba(30, 41, 59, 0.97) !important; }
+
+/* Text */
+html.dark .text-gray-900 { color: #f1f5f9 !important; }
+html.dark .text-gray-800 { color: #e2e8f0 !important; }
+html.dark .text-gray-700 { color: #cbd5e1 !important; }
+html.dark .text-gray-600 { color: #94a3b8 !important; }
+html.dark .text-gray-500 { color: #64748b !important; }
+html.dark .text-gray-400 { color: #475569 !important; }
+
+/* Borders */
+html.dark .border-gray-100 { border-color: #334155 !important; }
+html.dark .border-gray-200 { border-color: #334155 !important; }
+html.dark .border-t { border-color: #334155 !important; }
+
+/* Cards */
+html.dark .bg-gradient-to-br.from-gray-50 { background: linear-gradient(to bottom right, #1e293b, #0f172a) !important; }
+html.dark .from-blue-50 { --tw-gradient-from: #1e293b !important; }
+html.dark .to-orange-50 { --tw-gradient-to: #0f172a !important; }
+
+/* Dropdown menu */
+html.dark .bg-white.shadow-xl { background-color: #1e293b !important; }
+html.dark a.hover\:bg-orange-50:hover { background-color: rgba(245, 134, 52, 0.15) !important; }
+
+/* Form inputs */
+html.dark input,
+html.dark textarea,
+html.dark select {
+  background-color: #1e293b !important;
+  border-color: #334155 !important;
+  color: #f1f5f9 !important;
+}
+html.dark input::placeholder,
+html.dark textarea::placeholder { color: #64748b !important; }
+
+/* Scrollbar */
+html.dark ::-webkit-scrollbar-track { background: #1e293b; }
+
+/* ===== END DARK MODE ===== */
+
 /* Animations */
 @keyframes fadeInUp {
   from {

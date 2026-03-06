@@ -6,6 +6,7 @@ export const servicesNav = [
   { name: 'Digital Marketing', href: '/services/digital-marketing' },
   { name: 'Mobile App Development', href: '/services/mobile-app' },
   { name: 'On-Demand App Development', href: '/services/on-demand-app' },
+  { name: 'E-Commerce Development', href: '/services/ecommerce' },
 ]
 
 export const solutionsNav = [
