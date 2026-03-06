@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { FaBars, FaTimes, FaChevronDown } from 'react-icons/fa'
 import { motion, AnimatePresence } from 'framer-motion'
-import { servicesNav, solutionsNav, industriesNav } from '@/data/navigation'
+import { servicesNav, solutionsNav, industriesNav, companyNav } from '@/data/navigation'
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
@@ -18,8 +18,12 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-
-
+  const dropdowns = [
+    { key: 'company', label: 'Company', items: companyNav },
+    { key: 'services', label: 'Services', items: servicesNav },
+    { key: 'solutions', label: 'Solutions', items: solutionsNav },
+    { key: 'industries', label: 'Industries', items: industriesNav },
+  ]
 
   return (
     <nav
@@ -44,117 +48,48 @@ export default function Navbar() {
               Home
             </Link>
 
-            {/* Services Dropdown */}
-            <div
-              className="relative group"
-              onMouseEnter={() => setActiveDropdown('services')}
-              onMouseLeave={() => setActiveDropdown(null)}
-            >
-              <button className="flex items-center space-x-1 text-gray-700 hover:text-primary-orange transition-colors">
-                <span>Services</span>
-                <FaChevronDown className="text-xs" />
-              </button>
-              <AnimatePresence>
-                {activeDropdown === 'services' && (
-                  <motion.div
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: 10 }}
-                    className="absolute top-full left-0 mt-2 w-64 bg-white shadow-xl rounded-lg overflow-hidden"
-                  >
-                    {servicesNav.map((service) => (
-                      <Link
-                        key={service.href}
-                        href={service.href}
-                        className="block px-4 py-3 text-gray-700 hover:bg-orange-50 hover:text-primary-orange transition-colors"
-                      >
-                        {service.name}
-                      </Link>
-                    ))}
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </div>
+            {dropdowns.map(({ key, label, items }) => (
+              <div
+                key={key}
+                className="relative group"
+                onMouseEnter={() => setActiveDropdown(key)}
+                onMouseLeave={() => setActiveDropdown(null)}
+              >
+                <button className="flex items-center space-x-1 text-gray-700 hover:text-primary-orange transition-colors">
+                  <span>{label}</span>
+                  <FaChevronDown className="text-xs" />
+                </button>
+                <AnimatePresence>
+                  {activeDropdown === key && (
+                    <motion.div
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: 10 }}
+                      className="absolute top-full left-0 mt-2 w-64 bg-white shadow-xl rounded-lg overflow-hidden"
+                    >
+                      {items.map((item) => (
+                        <Link
+                          key={item.href}
+                          href={item.href}
+                          className="block px-4 py-3 text-gray-700 hover:bg-orange-50 hover:text-primary-orange transition-colors"
+                        >
+                          {item.name}
+                        </Link>
+                      ))}
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+            ))}
 
-            {/* Solutions Dropdown */}
-            <div
-              className="relative group"
-              onMouseEnter={() => setActiveDropdown('solutions')}
-              onMouseLeave={() => setActiveDropdown(null)}
-            >
-              <button className="flex items-center space-x-1 text-gray-700 hover:text-primary-orange transition-colors">
-                <span>Solutions</span>
-                <FaChevronDown className="text-xs" />
-              </button>
-              <AnimatePresence>
-                {activeDropdown === 'solutions' && (
-                  <motion.div
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: 10 }}
-                    className="absolute top-full left-0 mt-2 w-64 bg-white shadow-xl rounded-lg overflow-hidden"
-                  >
-                    {solutionsNav.map((solution) => (
-                      <Link
-                        key={solution.href}
-                        href={solution.href}
-                        className="block px-4 py-3 text-gray-700 hover:bg-orange-50 hover:text-primary-orange transition-colors"
-                      >
-                        {solution.name}
-                      </Link>
-                    ))}
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </div>
-
-            {/* Industries Dropdown */}
-            <div
-              className="relative group"
-              onMouseEnter={() => setActiveDropdown('industries')}
-              onMouseLeave={() => setActiveDropdown(null)}
-            >
-              <button className="flex items-center space-x-1 text-gray-700 hover:text-primary-orange transition-colors">
-                <span>Industries</span>
-                <FaChevronDown className="text-xs" />
-              </button>
-              <AnimatePresence>
-                {activeDropdown === 'industries' && (
-                  <motion.div
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: 10 }}
-                    className="absolute top-full left-0 mt-2 w-64 bg-white shadow-xl rounded-lg overflow-hidden"
-                  >
-                    {industriesNav.map((industry) => (
-                      <Link
-                        key={industry.href}
-                        href={industry.href}
-                        className="block px-4 py-3 text-gray-700 hover:bg-orange-50 hover:text-primary-orange transition-colors"
-                      >
-                        {industry.name}
-                      </Link>
-                    ))}
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </div>
-
+            <Link href="/technology" className="text-gray-700 hover:text-primary-orange transition-colors">
+              Technology
+            </Link>
             <Link href="/portfolio" className="text-gray-700 hover:text-primary-orange transition-colors">
               Portfolio
             </Link>
-            <Link href="/about" className="text-gray-700 hover:text-primary-orange transition-colors">
-              About Us
-            </Link>
             <Link href="/contact" className="text-gray-700 hover:text-primary-orange transition-colors">
               Contact
-            </Link>
-          </div>
-
-          {/* CTA Button */}
-          <div className="hidden lg:block">
-            <Link href="/contact" className="btn-primary">
-              Get Free Consultation
             </Link>
           </div>
 
@@ -185,93 +120,43 @@ export default function Navbar() {
                   Home
                 </Link>
 
-                {/* Mobile Services */}
-                <div className="space-y-2">
-                  <button
-                    onClick={() => setActiveDropdown(activeDropdown === 'services' ? null : 'services')}
-                    className="flex items-center justify-between w-full text-gray-700"
-                  >
-                    <span>Services</span>
-                    <FaChevronDown
-                      className={`text-xs transition-transform ${
-                        activeDropdown === 'services' ? 'rotate-180' : ''
-                      }`}
-                    />
-                  </button>
-                  {activeDropdown === 'services' && (
-                    <div className="pl-4 space-y-2">
-                      {servicesNav.map((service) => (
-                        <Link
-                          key={service.href}
-                          href={service.href}
-                          onClick={() => setIsOpen(false)}
-                          className="block text-gray-600 hover:text-primary-orange py-1"
-                        >
-                          {service.name}
-                        </Link>
-                      ))}
-                    </div>
-                  )}
-                </div>
+                {dropdowns.map(({ key, label, items }) => (
+                  <div key={key} className="space-y-2">
+                    <button
+                      onClick={() => setActiveDropdown(activeDropdown === key ? null : key)}
+                      className="flex items-center justify-between w-full text-gray-700"
+                    >
+                      <span>{label}</span>
+                      <FaChevronDown
+                        className={`text-xs transition-transform ${
+                          activeDropdown === key ? 'rotate-180' : ''
+                        }`}
+                      />
+                    </button>
+                    {activeDropdown === key && (
+                      <div className="pl-4 space-y-2">
+                        {items.map((item) => (
+                          <Link
+                            key={item.href}
+                            href={item.href}
+                            onClick={() => setIsOpen(false)}
+                            className="block text-gray-600 hover:text-primary-orange py-1"
+                          >
+                            {item.name}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                ))}
 
-                {/* Mobile Solutions */}
-                <div className="space-y-2">
-                  <button
-                    onClick={() => setActiveDropdown(activeDropdown === 'solutions' ? null : 'solutions')}
-                    className="flex items-center justify-between w-full text-gray-700"
-                  >
-                    <span>Solutions</span>
-                    <FaChevronDown
-                      className={`text-xs transition-transform ${
-                        activeDropdown === 'solutions' ? 'rotate-180' : ''
-                      }`}
-                    />
-                  </button>
-                  {activeDropdown === 'solutions' && (
-                    <div className="pl-4 space-y-2">
-                      {solutionsNav.map((solution) => (
-                        <Link
-                          key={solution.href}
-                          href={solution.href}
-                          onClick={() => setIsOpen(false)}
-                          className="block text-gray-600 hover:text-primary-orange py-1"
-                        >
-                          {solution.name}
-                        </Link>
-                      ))}
-                    </div>
-                  )}
-                </div>
-
-                {/* Mobile Industries */}
-                <div className="space-y-2">
-                  <button
-                    onClick={() => setActiveDropdown(activeDropdown === 'industries' ? null : 'industries')}
-                    className="flex items-center justify-between w-full text-gray-700"
-                  >
-                    <span>Industries</span>
-                    <FaChevronDown
-                      className={`text-xs transition-transform ${
-                        activeDropdown === 'industries' ? 'rotate-180' : ''
-                      }`}
-                    />
-                  </button>
-                  {activeDropdown === 'industries' && (
-                    <div className="pl-4 space-y-2">
-                      {industriesNav.map((industry) => (
-                        <Link
-                          key={industry.href}
-                          href={industry.href}
-                          onClick={() => setIsOpen(false)}
-                          className="block text-gray-600 hover:text-primary-orange py-1"
-                        >
-                          {industry.name}
-                        </Link>
-                      ))}
-                    </div>
-                  )}
-                </div>
-
+                <Link
+                  href="/technology"
+                  onClick={() => setIsOpen(false)}
+                  className="block text-gray-700 hover:text-primary-orange transition-colors"
+                >
+                  Technology
+                </Link>
                 <Link
                   href="/portfolio"
                   onClick={() => setIsOpen(false)}
@@ -280,22 +165,11 @@ export default function Navbar() {
                   Portfolio
                 </Link>
                 <Link
-                  href="/about"
-                  onClick={() => setIsOpen(false)}
-                  className="block text-gray-700 hover:text-primary-orange transition-colors"
-                >
-                  About Us
-                </Link>
-                <Link
                   href="/contact"
                   onClick={() => setIsOpen(false)}
                   className="block text-gray-700 hover:text-primary-orange transition-colors"
                 >
                   Contact
-                </Link>
-
-                <Link href="/contact" className="btn-primary block text-center mt-4">
-                  Get Free Consultation
                 </Link>
               </div>
             </motion.div>

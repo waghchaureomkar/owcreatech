@@ -1,9 +1,11 @@
 export const servicesNav = [
-  { name: 'Web Development', href: '/services/web-development' },
-  { name: 'Mobile App Development', href: '/services/mobile-app' },
   { name: 'Software Development', href: '/services/software-development' },
-  { name: 'AI & ML Solutions', href: '/services/ai-ml' },
+  { name: 'Web Development', href: '/services/web-development' },
+  { name: 'Web Design', href: '/services/web-design' },
+  { name: 'Logo & Graphic Design', href: '/services/graphics-design' },
   { name: 'Digital Marketing', href: '/services/digital-marketing' },
+  { name: 'Mobile App Development', href: '/services/mobile-app' },
+  { name: 'On-Demand App Development', href: '/services/on-demand-app' },
 ]
 
 export const solutionsNav = [
@@ -20,6 +22,13 @@ export const industriesNav = [
   { name: 'Education', href: '/industries/education' },
   { name: 'Real Estate', href: '/industries/real-estate' },
   { name: 'Travel & Tourism', href: '/industries/travel' },
+]
+
+export const companyNav = [
+  { name: 'About Us', href: '/about' },
+  { name: 'Career', href: '/career' },
+  { name: 'Blog', href: '/blog' },
+  { name: 'Contact Us', href: '/contact' },
 ]
 
 export const quickLinks = [

@@ -1,0 +1,158 @@
+export const solutionPages = [
+  {
+    slug: 'restaurant-management',
+    title: 'Restaurant Management System',
+    metaDescription: 'Custom restaurant management software — table management, menu, billing, inventory, and GST. OW CreaTech builds scalable restaurant solutions.',
+    hero: {
+      headline: 'Custom Restaurant Management System',
+      subheading: 'Streamline your restaurant operations with our all-in-one cloud-based management system — from table orders to billing, inventory, and analytics.',
+    },
+    subServices: [
+      { icon: '🪑', title: 'Table Management', description: 'Real-time table status, reservations, and seat assignments for smooth floor operations.' },
+      { icon: '🍽️', title: 'Menu Management', description: 'Dynamic digital menus with categories, combos, pricing, and QR code ordering support.' },
+      { icon: '📦', title: 'Stock & Inventory', description: 'Track raw materials, set low-stock alerts, and auto-deduct ingredients on every order.' },
+      { icon: '🧾', title: 'Billing & GST', description: 'Fast billing with GST calculation, split bills, discounts, and digital receipts.' },
+      { icon: '👨‍🍳', title: 'Kitchen Display System', description: 'Orders routed directly to kitchen screens for faster preparation and fewer errors.' },
+      { icon: '📊', title: 'Reports & Analytics', description: 'Daily sales reports, best-selling items, staff performance, and revenue dashboards.' },
+    ],
+    process: [
+      { step: 1, title: 'Requirement Gathering', description: 'Understand your restaurant type, number of outlets, and key operational pain points.' },
+      { step: 2, title: 'System Design', description: 'Design the module structure, database schema, and user role hierarchy.' },
+      { step: 3, title: 'Development', description: 'Build web panel, POS interface, kitchen display, and mobile app in parallel.' },
+      { step: 4, title: 'Testing & Training', description: 'End-to-end testing followed by staff training for smooth adoption.' },
+      { step: 5, title: 'Go Live & Support', description: 'Live deployment with data migration and dedicated post-launch support.' },
+    ],
+    techStack: ['React', 'Node.js', 'PostgreSQL', 'React Native', 'Redis', 'AWS', 'Stripe / Razorpay', 'Socket.io', 'Firebase', 'Docker'],
+    whyUs: [
+      { icon: '☁️', title: 'Cloud-Based SaaS', description: 'Access your restaurant data from anywhere — no expensive local servers needed.' },
+      { icon: '📱', title: 'Mobile POS', description: 'Take orders from tablets and smartphones on the floor for faster service.' },
+      { icon: '🔒', title: 'Secure & Reliable', description: 'Data encryption, daily backups, and 99.9% uptime guarantee for your business.' },
+      { icon: '🔧', title: 'Fully Customizable', description: 'Built from scratch for your specific needs — not a generic off-the-shelf product.' },
+    ],
+    faqs: [
+      { question: 'Can the system handle multiple restaurant branches?', answer: 'Yes, our system supports multi-branch management with centralized reporting and individual branch controls from a single admin panel.' },
+      { question: 'Does it support online ordering and delivery?', answer: 'Yes, we can integrate online ordering via your website/app with delivery management, rider tracking, and third-party delivery platform integration.' },
+      { question: 'Is GST billing included?', answer: 'Yes, the billing module supports GST calculation, GSTIN management, and generates GST-compliant invoices automatically.' },
+      { question: 'Can it work offline without internet?', answer: 'Yes, our POS supports offline mode for billing and order taking. Data syncs automatically once the connection is restored.' },
+      { question: 'How long does implementation take?', answer: 'A standard restaurant management system is deployed within 4–8 weeks depending on customization requirements and number of outlets.' },
+    ],
+  },
+  {
+    slug: 'crm',
+    title: 'CRM Development',
+    metaDescription: 'Custom CRM software development — lead management, sales pipeline, customer tracking, and automation. OW CreaTech builds CRM solutions for growing businesses.',
+    hero: {
+      headline: 'Custom CRM Software Development',
+      subheading: 'Manage leads, track sales pipelines, and build stronger customer relationships with a fully custom CRM built around your business processes.',
+    },
+    subServices: [
+      { icon: '🎯', title: 'Lead Management', description: 'Capture, track, and nurture leads from multiple sources — web forms, calls, emails, and social media.' },
+      { icon: '📈', title: 'Sales Pipeline', description: 'Visual Kanban-style pipeline to track deals through every stage from prospect to closed.' },
+      { icon: '👥', title: 'Contact Management', description: 'Centralized contact database with interaction history, notes, and activity timelines.' },
+      { icon: '🤖', title: 'Sales Automation', description: 'Automate follow-ups, email sequences, reminders, and task assignments to save time.' },
+      { icon: '📧', title: 'Email & Communication', description: 'Two-way email sync, call logging, WhatsApp integration, and communication history in one place.' },
+      { icon: '📊', title: 'Analytics & Reports', description: 'Sales forecasting, team performance dashboards, conversion rates, and revenue reports.' },
+    ],
+    process: [
+      { step: 1, title: 'Business Analysis', description: 'Map your sales process, team structure, and identify CRM requirements unique to your business.' },
+      { step: 2, title: 'CRM Architecture', description: 'Design data models, user roles, workflow automation rules, and integration points.' },
+      { step: 3, title: 'Development', description: 'Build the CRM with all modules, automations, and integrations in agile sprints.' },
+      { step: 4, title: 'Data Migration', description: 'Migrate existing customer data from spreadsheets or legacy systems safely.' },
+      { step: 5, title: 'Training & Launch', description: 'Team training sessions, documentation, and go-live with dedicated support.' },
+    ],
+    techStack: ['React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS', 'Twilio', 'SendGrid', 'Zapier API', 'WhatsApp Business API', 'Google Workspace API'],
+    whyUs: [
+      { icon: '🔧', title: 'Built For You', description: 'Unlike generic CRMs, ours is designed specifically for your sales process and industry.' },
+      { icon: '🔗', title: 'Integrations', description: 'Connects with your existing tools — email, telephony, WhatsApp, ERP, and marketing platforms.' },
+      { icon: '📱', title: 'Mobile CRM', description: 'Full-featured mobile app for your sales team to manage leads and deals on the go.' },
+      { icon: '📈', title: 'Scalable', description: 'Grows with your team — from 5 users to 500+ with no performance degradation.' },
+    ],
+    faqs: [
+      { question: 'How is custom CRM better than Salesforce or HubSpot?', answer: 'Custom CRM gives you exactly what your business needs — no unnecessary features, no monthly per-user fees, and full data ownership. It mirrors your exact workflow.' },
+      { question: 'Can you migrate data from our existing CRM?', answer: 'Yes, we handle complete data migration from any existing CRM or spreadsheet system with data integrity validation.' },
+      { question: 'Can it integrate with our existing software?', answer: 'Yes, we can integrate with your ERP, accounting software, telephony system, email providers, and any tool with an API.' },
+      { question: 'Is a mobile app included?', answer: 'Yes, we build iOS and Android mobile apps for your CRM so your field sales team has full access on the go.' },
+      { question: 'How long does CRM development take?', answer: 'A standard CRM takes 3–5 months. Simpler versions with core features can be ready in 6–8 weeks.' },
+    ],
+  },
+  {
+    slug: 'ecommerce',
+    title: 'E-Commerce Software Development',
+    metaDescription: 'Custom e-commerce software development — online stores, marketplace platforms, B2B portals, and headless commerce. OW CreaTech builds scalable e-commerce solutions.',
+    hero: {
+      headline: 'Custom E-Commerce Software Development',
+      subheading: 'Launch and scale your online business with a fully custom e-commerce platform — built for performance, conversions, and growth.',
+    },
+    subServices: [
+      { icon: '🛒', title: 'Online Store Development', description: 'Feature-rich B2C online stores with product catalog, cart, checkout, and payment processing.' },
+      { icon: '🏪', title: 'Multi-Vendor Marketplace', description: 'Amazon/Flipkart-style marketplaces with seller onboarding, commissions, and dashboards.' },
+      { icon: '🏢', title: 'B2B E-Commerce Portal', description: 'Wholesale portals with bulk ordering, custom pricing tiers, and credit management.' },
+      { icon: '📱', title: 'Mobile Commerce App', description: 'iOS and Android shopping apps with push notifications, wishlist, and seamless checkout.' },
+      { icon: '🔌', title: 'Headless Commerce', description: 'API-first headless architecture for blazing-fast storefronts connected to any frontend.' },
+      { icon: '📦', title: 'Order & Inventory Management', description: 'Real-time inventory tracking, order processing, returns management, and warehouse integration.' },
+    ],
+    process: [
+      { step: 1, title: 'Strategy & Planning', description: 'Define your business model, target market, product catalog size, and platform requirements.' },
+      { step: 2, title: 'UX & Design', description: 'Conversion-optimized storefront design with mobile-first approach and A/B tested layouts.' },
+      { step: 3, title: 'Development', description: 'Build frontend, backend APIs, payment gateway, and admin panel with agile sprints.' },
+      { step: 4, title: 'Integration & Testing', description: 'Integrate payments, logistics, ERP, and run comprehensive performance and security testing.' },
+      { step: 5, title: 'Launch & Growth', description: 'Go-live with SEO optimization, analytics setup, and ongoing feature development support.' },
+    ],
+    techStack: ['Next.js', 'React', 'Node.js', 'PostgreSQL', 'MongoDB', 'Redis', 'Stripe / Razorpay', 'AWS', 'Elasticsearch', 'Shiprocket API', 'Algolia'],
+    whyUs: [
+      { icon: '⚡', title: 'High Performance', description: 'Sub-2-second load times and 99.9% uptime — because every second of delay costs conversions.' },
+      { icon: '🔒', title: 'PCI-DSS Compliant', description: 'Secure payment processing with industry-standard compliance, SSL, and fraud prevention.' },
+      { icon: '📈', title: 'Conversion Optimized', description: 'UX designed around conversion best practices — better checkout flows, fewer cart abandonments.' },
+      { icon: '🌍', title: 'Multi-Currency & Language', description: 'Built for global scale with multi-currency support, localization, and international shipping.' },
+    ],
+    faqs: [
+      { question: 'Should I use Shopify or build a custom e-commerce platform?', answer: 'Shopify is great for standard stores. Custom development makes sense when you need unique features, own your platform, avoid monthly fees, or run a marketplace/B2B model.' },
+      { question: 'Which payment gateways do you integrate?', answer: 'We integrate Razorpay, Stripe, PayU, CCAvenue, PayPal, and any other gateway of your choice including UPI, wallets, and BNPL options.' },
+      { question: 'Can you build a multi-vendor marketplace?', answer: 'Yes, we specialize in marketplace development with full vendor management, commission tracking, payout systems, and individual seller dashboards.' },
+      { question: 'How do you handle product catalog with thousands of SKUs?', answer: 'We build with Elasticsearch or Algolia for fast search and filtering across large catalogs, with bulk import/export tools for catalog management.' },
+      { question: 'How long does e-commerce development take?', answer: 'A standard online store: 2–3 months. A full marketplace platform: 4–6 months. Timeline depends on features and integration complexity.' },
+    ],
+  },
+  {
+    slug: 'school-management',
+    title: 'School Management Software',
+    metaDescription: 'Custom school management system — student records, attendance, fee management, online classes, and parent portal. OW CreaTech builds EdTech solutions.',
+    hero: {
+      headline: 'School Management Software System',
+      subheading: 'Digitize your institution\'s operations with a comprehensive school management system — from admissions to results, fees to parent communication.',
+    },
+    subServices: [
+      { icon: '🎓', title: 'Student Information System', description: 'Complete student profiles, academic history, documents, and enrollment management.' },
+      { icon: '📋', title: 'Attendance Management', description: 'Biometric and manual attendance tracking with automatic parent SMS alerts on absence.' },
+      { icon: '💰', title: 'Fee Management', description: 'Fee structure setup, online payment collection, receipts, and outstanding dues tracking.' },
+      { icon: '📚', title: 'Examination & Results', description: 'Exam scheduling, mark entry, grade calculation, and automated report card generation.' },
+      { icon: '👨‍👩‍👦', title: 'Parent Portal & App', description: 'Mobile app for parents to track attendance, view results, pay fees, and communicate with teachers.' },
+      { icon: '🎥', title: 'Online Classes & LMS', description: 'Live class scheduling, recorded lectures, assignments, and learning management features.' },
+    ],
+    process: [
+      { step: 1, title: 'Requirement Analysis', description: 'Understand institution type, number of students, departments, and key operational needs.' },
+      { step: 2, title: 'Module Planning', description: 'Define modules, user roles (admin, teacher, student, parent), and access permissions.' },
+      { step: 3, title: 'Development', description: 'Build web admin, teacher portal, student portal, and parent mobile app simultaneously.' },
+      { step: 4, title: 'Data Migration', description: 'Import existing student, staff, and academic data from legacy systems or spreadsheets.' },
+      { step: 5, title: 'Training & Go-Live', description: 'Staff training, pilot run, and full deployment with ongoing technical support.' },
+    ],
+    techStack: ['React', 'Node.js', 'PostgreSQL', 'React Native', 'Firebase', 'AWS', 'Razorpay', 'Twilio SMS', 'Zoom API', 'Google Meet API'],
+    whyUs: [
+      { icon: '🏫', title: 'Education Specialists', description: 'Deep expertise in education technology — we understand how schools operate and what they need.' },
+      { icon: '📱', title: 'Parent Mobile App', description: 'Dedicated parent app keeps families informed and engaged with their child\'s progress.' },
+      { icon: '🔒', title: 'Data Privacy', description: 'Student data handled with strict privacy standards and role-based access controls.' },
+      { icon: '🌐', title: 'Multi-School Support', description: 'Manage multiple branches or franchise schools from a single centralized admin panel.' },
+    ],
+    faqs: [
+      { question: 'Can the system handle multiple school branches?', answer: 'Yes, our system supports multi-branch schools with centralized administration and branch-level data separation and reporting.' },
+      { question: 'Is online fee payment included?', answer: 'Yes, students and parents can pay fees online via UPI, net banking, cards, or wallets. Automatic receipts and ledger updates are included.' },
+      { question: 'Does it work for colleges and universities too?', answer: 'Yes, the system is adaptable for schools, colleges, coaching institutes, and universities with customization for higher education workflows.' },
+      { question: 'Is there a mobile app for parents?', answer: 'Yes, we build iOS and Android apps for parents with attendance alerts, fee payment, result viewing, homework tracking, and school notifications.' },
+      { question: 'How long does implementation take?', answer: 'Standard school management system: 2–4 months. Implementation includes data migration, training, and a soft-launch period.' },
+    ],
+  },
+]
+
+export function getSolutionBySlug(slug) {
+  return solutionPages.find((s) => s.slug === slug) || null
+}

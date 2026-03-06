@@ -2,7 +2,7 @@
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import { useForm } from 'react-hook-form'
-import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaWhatsapp } from 'react-icons/fa'
+import { FaPhone, FaEnvelope, FaWhatsapp } from 'react-icons/fa'
 import { useState } from 'react'
 import { sendEmail } from '@/lib/emailjs'
 import { offices, contactInfo } from '@/data/company'
@@ -217,9 +217,9 @@ export default function Contact() {
             Our Global <span className="text-gradient">Offices</span>
           </h2>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="flex flex-wrap justify-center gap-8">
             {offices.map((office, index) => (
-              <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all">
+              <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all w-full sm:w-[calc(50%-16px)] lg:w-64">
                 <div className="flex items-center mb-4">
                   <span className="text-4xl mr-3">{office.flag}</span>
                   <h3 className="text-xl font-bold text-gray-900">{office.location}</h3>

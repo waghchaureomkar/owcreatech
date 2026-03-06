@@ -120,11 +120,11 @@ export default function Footer() {
           {/* Office Locations */}
           <div className="mt-12 pt-8 border-t border-gray-800">
             <h4 className="text-xl font-semibold text-white mb-6 text-center">Our Global Offices</h4>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="flex flex-wrap justify-center gap-6">
               {offices.map((office, index) => (
                 <div
                   key={index}
-                  className="bg-gray-800 p-5 rounded-lg hover:bg-gray-750 transition-colors duration-300"
+                  className="bg-gray-800 p-5 rounded-lg hover:bg-gray-750 transition-colors duration-300 w-full sm:w-[calc(50%-12px)] lg:w-64"
                 >
                   <div className="flex items-center mb-3">
                     <span className="text-3xl mr-2">{office.flag}</span>

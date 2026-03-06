@@ -1,26 +1,26 @@
 export const offices = [
   {
-    location: 'Jaipur (Headquarters)',
+    location: 'Mumbai (Headquarters)',
     address: '2-Shiv Vihar-A, New Sanganer Road, Mansarovar, Jaipur, Rajasthan',
-    phone: '+91 7230001612',
+    phone: '+91 7700000001',
     flag: '🇮🇳'
   },
   {
-    location: 'Gurugram',
+    location: 'Pune',
     address: '1701A, Magnum Global Park, Sector 58, Gurugram, Haryana',
-    phone: '+91 7230001613',
+    phone: '+91 7700000002',
     flag: '🇮🇳'
   },
-  {
-    location: 'London, UK',
-    address: '71-75 Shelton Street, Covent Garden, London, WC2H 9JQ',
-    phone: '+44 7956982975',
-    flag: '🇬🇧'
-  },
+  // {
+  //   location: 'London, UK',
+  //   address: '71-75 Shelton Street, Covent Garden, London, WC2H 9JQ',
+  //   phone: '+44 7700000003',
+  //   flag: '🇬🇧'
+  // },
   {
     location: 'Dubai, UAE',
     address: 'Office 1105 A, Trio Tower, Al Barsha, Dubai',
-    phone: '+971 525410937',
+    phone: '+971 770000004',
     flag: '🇦🇪'
   }
 ]
