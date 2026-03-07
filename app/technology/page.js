@@ -5,8 +5,8 @@ import Link from 'next/link'
 import { techCategories } from '@/data/technologyPage'
 
 export const metadata = {
-  title: 'Technology Stack | OW CreaTech',
-  description: 'Explore the cutting-edge technologies OW CreaTech uses — React, Node.js, Flutter, AWS, AI/ML, and more across frontend, backend, mobile, and cloud.',
+  title: 'Technology Stack | One Klick',
+  description: 'Explore the cutting-edge technologies One Klick uses — React, Node.js, Flutter, AWS, AI/ML, and more across frontend, backend, mobile, and cloud.',
 }
 
 export default function TechnologyPage() {

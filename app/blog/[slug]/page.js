@@ -11,7 +11,7 @@ export async function generateMetadata({ params }) {
   const post = getBlogBySlug(slug)
   if (!post) return {}
   return {
-    title: `${post.title} | OW CreaTech Blog`,
+    title: `${post.title} | One Klick Blog`,
     description: post.excerpt,
   }
 }

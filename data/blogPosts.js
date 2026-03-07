@@ -59,7 +59,7 @@ export const blogPosts = [
       },
       {
         type: 'paragraph',
-        text: 'In 2025, Next.js is not just a framework — it\'s the foundation for building modern, performant, and scalable web applications. Whether you\'re building a startup MVP, an enterprise application, or an e-commerce platform, Next.js provides the tools and architecture to deliver exceptional user experiences. At OW CreaTech, we use Next.js as our primary framework for all major web projects, and the results speak for themselves.',
+        text: 'In 2025, Next.js is not just a framework — it\'s the foundation for building modern, performant, and scalable web applications. Whether you\'re building a startup MVP, an enterprise application, or an e-commerce platform, Next.js provides the tools and architecture to deliver exceptional user experiences. At One Klick, we use Next.js as our primary framework for all major web projects, and the results speak for themselves.',
       },
     ],
   },
@@ -127,11 +127,11 @@ export const blogPosts = [
       },
       {
         type: 'heading',
-        text: 'Our Recommendation at OW CreaTech',
+        text: 'Our Recommendation at One Klick',
       },
       {
         type: 'paragraph',
-        text: 'At OW CreaTech, we use both frameworks depending on the project requirements. For clients with existing web teams, React Native accelerates development significantly. For startups wanting a single codebase across all platforms with beautiful, custom UI, Flutter is often the better choice. The best framework is the one that best fits your team\'s skills and your project\'s requirements.',
+        text: 'At One Klick, we use both frameworks depending on the project requirements. For clients with existing web teams, React Native accelerates development significantly. For startups wanting a single codebase across all platforms with beautiful, custom UI, Flutter is often the better choice. The best framework is the one that best fits your team\'s skills and your project\'s requirements.',
       },
     ],
   },
@@ -211,7 +211,7 @@ export const blogPosts = [
       },
       {
         type: 'paragraph',
-        text: 'SEO is a long-term investment, but for SaaS businesses, it often provides the highest ROI of any marketing channel at scale. Focus on intent-driven content, build topical authority methodically, and always measure what\'s working. At OW CreaTech, our digital marketing team specializes in growth strategies for software companies — reach out if you\'d like to discuss your SEO roadmap.',
+        text: 'SEO is a long-term investment, but for SaaS businesses, it often provides the highest ROI of any marketing channel at scale. Focus on intent-driven content, build topical authority methodically, and always measure what\'s working. At One Klick, our digital marketing team specializes in growth strategies for software companies — reach out if you\'d like to discuss your SEO roadmap.',
       },
     ],
   },
@@ -275,7 +275,7 @@ export const blogPosts = [
       },
       {
         type: 'paragraph',
-        text: 'Start small — identify one repetitive, text-based task in your business that takes significant human time, and build a focused AI solution for that specific problem. Measure the impact, iterate based on real usage, and then expand. At OW CreaTech, we specialize in AI integration for business applications. Contact us to discuss how AI can create value in your specific context.',
+        text: 'Start small — identify one repetitive, text-based task in your business that takes significant human time, and build a focused AI solution for that specific problem. Measure the impact, iterate based on real usage, and then expand. At One Klick, we specialize in AI integration for business applications. Contact us to discuss how AI can create value in your specific context.',
       },
     ],
   },
@@ -339,7 +339,7 @@ export const blogPosts = [
       },
       {
         type: 'paragraph',
-        text: 'Color is one of your most powerful and cost-free design tools. A thoughtful color strategy — grounded in psychological principles, accessibility requirements, and systematic design thinking — can meaningfully improve user satisfaction and business metrics. At OW CreaTech, our UI/UX designers apply these principles to every project, ensuring that color works as hard as every other element of your product.',
+        text: 'Color is one of your most powerful and cost-free design tools. A thoughtful color strategy — grounded in psychological principles, accessibility requirements, and systematic design thinking — can meaningfully improve user satisfaction and business metrics. At One Klick, our UI/UX designers apply these principles to every project, ensuring that color works as hard as every other element of your product.',
       },
     ],
   },
@@ -411,7 +411,7 @@ export const blogPosts = [
       },
       {
         type: 'paragraph',
-        text: 'Microservices are a powerful architectural pattern for large-scale systems with large teams, but they are not a default choice. For most startups and growing businesses, a well-structured modular monolith delivers faster time-to-market, lower operational overhead, and sufficient scalability for years of growth. At OW CreaTech, we help clients make architecture decisions based on their actual current needs and realistic growth projections — not industry hype.',
+        text: 'Microservices are a powerful architectural pattern for large-scale systems with large teams, but they are not a default choice. For most startups and growing businesses, a well-structured modular monolith delivers faster time-to-market, lower operational overhead, and sufficient scalability for years of growth. At One Klick, we help clients make architecture decisions based on their actual current needs and realistic growth projections — not industry hype.',
       },
     ],
   },

@@ -16,7 +16,7 @@ export const techCategories = [
       },
       {
         icon: SiNodedotjs, name: 'Node.js', color: '#339933',
-        description: 'Node.js is a high-performance, event-driven JavaScript runtime built on Chrome\'s V8 engine. It allows developers to run JavaScript on the server side, making it ideal for building fast, scalable network applications. Its non-blocking I/O model makes it highly efficient for real-time applications, REST APIs, and microservices. At OW CreaTech, we leverage Node.js extensively to deliver robust backends that handle high traffic and complex business logic with ease.',
+        description: 'Node.js is a high-performance, event-driven JavaScript runtime built on Chrome\'s V8 engine. It allows developers to run JavaScript on the server side, making it ideal for building fast, scalable network applications. Its non-blocking I/O model makes it highly efficient for real-time applications, REST APIs, and microservices. At One Klick, we leverage Node.js extensively to deliver robust backends that handle high traffic and complex business logic with ease.',
       },
       {
         icon: SiPython, name: 'Python', color: '#3776AB',
@@ -57,7 +57,7 @@ export const techCategories = [
       },
       {
         icon: SiReact, name: 'React.js', color: '#61DAFB',
-        description: 'React.js is a widely adopted JavaScript library developed by Facebook for building fast, interactive user interfaces. It uses a component-based architecture and a virtual DOM to efficiently update and render components, resulting in highly performant web applications. React\'s reusable components, rich ecosystem, and strong community support make it the leading choice for modern frontend development. At OW CreaTech, we use React to build dynamic, scalable, and visually stunning web applications for our clients worldwide.',
+        description: 'React.js is a widely adopted JavaScript library developed by Facebook for building fast, interactive user interfaces. It uses a component-based architecture and a virtual DOM to efficiently update and render components, resulting in highly performant web applications. React\'s reusable components, rich ecosystem, and strong community support make it the leading choice for modern frontend development. At One Klick, we use React to build dynamic, scalable, and visually stunning web applications for our clients worldwide.',
       },
       {
         icon: SiAngular, name: 'Angular.js', color: '#DD0031',

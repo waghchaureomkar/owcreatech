@@ -4,8 +4,8 @@ import FloatingPanel from '@/components/FloatingPanel'
 import Link from 'next/link'
 
 export const metadata = {
-  title: 'Blog | OW CreaTech',
-  description: 'Stay updated with the latest insights on software development, web design, digital marketing, and technology trends from OW CreaTech.',
+  title: 'Blog | One Klick',
+  description: 'Stay updated with the latest insights on software development, web design, digital marketing, and technology trends from One Klick.',
 }
 
 import { blogPosts } from '@/data/blogPosts'

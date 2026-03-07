@@ -150,7 +150,7 @@ export default function Footer() {
         <div className="container-custom px-4">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-sm text-gray-500 text-center md:text-left">
-              © {currentYear} OW CreaTech. All rights reserved.
+              © {currentYear} One Klick. All rights reserved.
             </p>
             <div className="flex space-x-6 text-sm">
               <Link href="/privacy-policy" className="text-gray-500 hover:text-primary-orange transition-colors">

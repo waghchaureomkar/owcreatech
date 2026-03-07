@@ -2,7 +2,7 @@ export const industryPages = [
   {
     slug: 'fintech',
     title: 'FinTech Software Development',
-    metaDescription: 'FinTech software development — digital payments, AePS, money transfer, BBPS, recharge platforms. OW CreaTech builds secure financial technology solutions.',
+    metaDescription: 'FinTech software development — digital payments, AePS, money transfer, BBPS, recharge platforms. One Klick builds secure financial technology solutions.',
     hero: {
       headline: 'FinTech Software Development Company',
       subheading: 'Build and launch your FinTech business with our comprehensive B2B financial software — digital payments, money transfer, and banking services in one platform.',
@@ -40,7 +40,7 @@ export const industryPages = [
   {
     slug: 'healthcare',
     title: 'Healthcare Software Development',
-    metaDescription: 'Healthcare software development — hospital management, telemedicine, patient portals, EMR systems. OW CreaTech builds HIPAA-compliant healthcare solutions.',
+    metaDescription: 'Healthcare software development — hospital management, telemedicine, patient portals, EMR systems. One Klick builds HIPAA-compliant healthcare solutions.',
     hero: {
       headline: 'Healthcare Software Development Company',
       subheading: 'Modernize healthcare delivery with custom software — from hospital management systems to telemedicine apps and patient engagement platforms.',
@@ -78,7 +78,7 @@ export const industryPages = [
   {
     slug: 'ecommerce',
     title: 'E-Commerce Industry Solutions',
-    metaDescription: 'E-commerce technology solutions — retail tech, supply chain, marketplace platforms, and customer experience tools. OW CreaTech serves the e-commerce industry.',
+    metaDescription: 'E-commerce technology solutions — retail tech, supply chain, marketplace platforms, and customer experience tools. One Klick serves the e-commerce industry.',
     hero: {
       headline: 'Technology Solutions for E-Commerce Industry',
       subheading: 'Power your e-commerce business with cutting-edge technology — from AI-driven product recommendations to seamless multi-channel retail experiences.',
@@ -116,7 +116,7 @@ export const industryPages = [
   {
     slug: 'education',
     title: 'Education Technology Solutions',
-    metaDescription: 'EdTech software development — LMS, online learning platforms, school apps, and e-learning solutions. OW CreaTech builds technology for the education industry.',
+    metaDescription: 'EdTech software development — LMS, online learning platforms, school apps, and e-learning solutions. One Klick builds technology for the education industry.',
     hero: {
       headline: 'Education Technology (EdTech) Solutions',
       subheading: 'Transform learning experiences with custom EdTech platforms — online courses, live classes, assessments, and student engagement tools for modern education.',
@@ -154,7 +154,7 @@ export const industryPages = [
   {
     slug: 'real-estate',
     title: 'Real Estate Software Development',
-    metaDescription: 'Real estate software development — property portals, CRM, virtual tours, and PropTech solutions. OW CreaTech builds technology for real estate businesses.',
+    metaDescription: 'Real estate software development — property portals, CRM, virtual tours, and PropTech solutions. One Klick builds technology for real estate businesses.',
     hero: {
       headline: 'Real Estate Technology (PropTech) Solutions',
       subheading: 'Digitize your real estate business with custom property portals, CRM, virtual tours, and smart platforms that connect buyers, sellers, and agents.',
@@ -192,7 +192,7 @@ export const industryPages = [
   {
     slug: 'travel',
     title: 'Travel & Tourism Software',
-    metaDescription: 'Travel and tourism software development — booking engines, OTA portals, hotel management, and tour operator systems. OW CreaTech builds TravelTech solutions.',
+    metaDescription: 'Travel and tourism software development — booking engines, OTA portals, hotel management, and tour operator systems. One Klick builds TravelTech solutions.',
     hero: {
       headline: 'Travel & Tourism Technology Solutions',
       subheading: 'Build powerful travel platforms with custom booking engines, OTA portals, and tour management systems that delight travelers and grow your business.',

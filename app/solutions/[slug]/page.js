@@ -11,7 +11,7 @@ export async function generateMetadata({ params }) {
   const solution = getSolutionBySlug(slug)
   if (!solution) return {}
   return {
-    title: `${solution.title} | OW CreaTech`,
+    title: `${solution.title} | One Klick`,
     description: solution.metaDescription,
   }
 }

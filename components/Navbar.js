@@ -1,6 +1,7 @@
 'use client'
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import { FaBars, FaTimes, FaChevronDown, FaMoon, FaSun } from 'react-icons/fa'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useTheme } from 'next-themes'
@@ -11,6 +12,9 @@ export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [mounted, setMounted] = useState(false)
   const { theme, setTheme } = useTheme()
+  const pathname = usePathname()
+  const isHome = pathname === '/'
+  const isTransparent = isHome && !isScrolled
 
   useEffect(() => { setMounted(true) }, [])
   const [activeDropdown, setActiveDropdown] = useState(null)
@@ -33,7 +37,7 @@ export default function Navbar() {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white shadow-lg' : 'bg-white/95 backdrop-blur-sm'
+        isTransparent ? 'bg-black/20 backdrop-blur-sm' : 'bg-white shadow-lg'
       }`}
     >
       <div className="container-custom">
@@ -41,15 +45,15 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-1">
             <span className="text-2xl md:text-3xl font-black tracking-tight" style={{ fontFamily: "'Museo Moderno', sans-serif" }}>
-              <span className="bg-gradient-to-r from-primary-orange to-orange-600 bg-clip-text text-transparent">OW</span>
-              <span className="text-gray-800"> </span>
-              <span className="bg-gradient-to-r from-primary-blue to-blue-600 bg-clip-text text-transparent font-black">CreaTech</span>
+              <span className="bg-gradient-to-r from-primary-orange to-orange-600 bg-clip-text text-transparent">One</span>
+              <span className={isTransparent ? 'text-white' : 'text-gray-800'}> </span>
+              <span className="bg-gradient-to-r from-primary-blue to-blue-600 bg-clip-text text-transparent font-black">Klick</span>
             </span>
           </Link>
 
           {/* Desktop Menu */}
           <div className="hidden lg:flex items-center space-x-8">
-            <Link href="/" className="text-gray-700 hover:text-primary-orange transition-colors">
+            <Link href="/" className={`hover:text-primary-orange transition-colors ${isTransparent ? 'text-white' : 'text-gray-700'}`}>
               Home
             </Link>
 
@@ -60,7 +64,7 @@ export default function Navbar() {
                 onMouseEnter={() => setActiveDropdown(key)}
                 onMouseLeave={() => setActiveDropdown(null)}
               >
-                <button className="flex items-center space-x-1 text-gray-700 hover:text-primary-orange transition-colors">
+                <button className={`flex items-center space-x-1 hover:text-primary-orange transition-colors ${isTransparent ? 'text-white' : 'text-gray-700'}`}>
                   <span>{label}</span>
                   <FaChevronDown className="text-xs" />
                 </button>
@@ -87,13 +91,13 @@ export default function Navbar() {
               </div>
             ))}
 
-            <Link href="/technology" className="text-gray-700 hover:text-primary-orange transition-colors">
+            <Link href="/technology" className={`hover:text-primary-orange transition-colors ${isTransparent ? 'text-white' : 'text-gray-700'}`}>
               Technology
             </Link>
-            <Link href="/portfolio" className="text-gray-700 hover:text-primary-orange transition-colors">
+            <Link href="/portfolio" className={`hover:text-primary-orange transition-colors ${isTransparent ? 'text-white' : 'text-gray-700'}`}>
               Portfolio
             </Link>
-            <Link href="/contact" className="text-gray-700 hover:text-primary-orange transition-colors">
+            <Link href="/contact" className={`hover:text-primary-orange transition-colors ${isTransparent ? 'text-white' : 'text-gray-700'}`}>
               Contact
             </Link>
 
@@ -101,7 +105,7 @@ export default function Navbar() {
             {mounted && (
               <button
                 onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-                className="w-9 h-9 flex items-center justify-center rounded-full border border-gray-200 text-gray-600 hover:border-primary-orange hover:text-primary-orange transition-all"
+                className={`w-9 h-9 flex items-center justify-center rounded-full border hover:border-primary-orange hover:text-primary-orange transition-all ${isTransparent ? 'border-white/50 text-white' : 'border-gray-200 text-gray-600'}`}
                 aria-label="Toggle dark mode"
               >
                 {theme === 'dark' ? <FaSun className="text-sm" /> : <FaMoon className="text-sm" />}
@@ -114,7 +118,7 @@ export default function Navbar() {
             {mounted && (
               <button
                 onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-                className="w-9 h-9 flex items-center justify-center rounded-full border border-gray-200 text-gray-600 hover:border-primary-orange hover:text-primary-orange transition-all"
+                className={`w-9 h-9 flex items-center justify-center rounded-full border hover:border-primary-orange hover:text-primary-orange transition-all ${isTransparent ? 'border-white/50 text-white' : 'border-gray-200 text-gray-600'}`}
                 aria-label="Toggle dark mode"
               >
                 {theme === 'dark' ? <FaSun className="text-sm" /> : <FaMoon className="text-sm" />}
@@ -122,7 +126,7 @@ export default function Navbar() {
             )}
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-2xl text-gray-700 focus:outline-none"
+              className={`text-2xl focus:outline-none ${isTransparent ? 'text-white' : 'text-gray-700'}`}
             >
               {isOpen ? <FaTimes /> : <FaBars />}
             </button>

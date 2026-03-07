@@ -67,7 +67,7 @@ export default function ApplyPage() {
                 <div className="text-6xl mb-6">🎉</div>
                 <h2 className="text-3xl font-bold text-gray-900 mb-4">Application Submitted!</h2>
                 <p className="text-gray-600 text-lg mb-8">
-                  Thank you for applying at OW CreaTech. We'll review your application and reach out within 2 business days.
+                  Thank you for applying at One Klick. We'll review your application and reach out within 2 business days.
                 </p>
                 <Link href="/career" className="btn-primary">
                   Back to Careers
@@ -169,7 +169,7 @@ export default function ApplyPage() {
                     rows={5}
                     value={form.message}
                     onChange={handleChange}
-                    placeholder="Tell us about yourself, your experience, and why you'd be a great fit at OW CreaTech..."
+                    placeholder="Tell us about yourself, your experience, and why you'd be a great fit at One Klick..."
                     className="w-full border border-gray-300 rounded-lg px-4 py-3 text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-orange/40 focus:border-primary-orange transition resize-none"
                   />
                 </div>

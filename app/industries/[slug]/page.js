@@ -11,7 +11,7 @@ export async function generateMetadata({ params }) {
   const industry = getIndustryBySlug(slug)
   if (!industry) return {}
   return {
-    title: `${industry.title} | OW CreaTech`,
+    title: `${industry.title} | One Klick`,
     description: industry.metaDescription,
   }
 }

@@ -2,7 +2,7 @@ export const servicePages = [
   {
     slug: 'software-development',
     title: 'Software Development',
-    metaDescription: 'Custom software development services — enterprise apps, SaaS platforms, APIs, and more. OW CreaTech delivers scalable, robust solutions.',
+    metaDescription: 'Custom software development services — enterprise apps, SaaS platforms, APIs, and more. One Klick delivers scalable, robust solutions.',
     hero: {
       headline: 'Custom Software Development Services',
       subheading: 'We build powerful, scalable software solutions tailored to your business needs — from enterprise applications to SaaS platforms.',
@@ -40,7 +40,7 @@ export const servicePages = [
   {
     slug: 'web-development',
     title: 'Web Development',
-    metaDescription: 'Professional web development services — React, Next.js, Node.js, full-stack web apps. OW CreaTech builds fast, scalable websites.',
+    metaDescription: 'Professional web development services — React, Next.js, Node.js, full-stack web apps. One Klick builds fast, scalable websites.',
     hero: {
       headline: 'Professional Web Development Services',
       subheading: 'From landing pages to complex web applications — we build fast, responsive, and SEO-optimized websites that convert visitors into customers.',
@@ -78,7 +78,7 @@ export const servicePages = [
   {
     slug: 'web-design',
     title: 'Web Design',
-    metaDescription: 'Creative UI/UX web design services — wireframes, prototypes, and pixel-perfect designs. OW CreaTech crafts beautiful, conversion-focused websites.',
+    metaDescription: 'Creative UI/UX web design services — wireframes, prototypes, and pixel-perfect designs. One Klick crafts beautiful, conversion-focused websites.',
     hero: {
       headline: 'Creative UI/UX Web Design Services',
       subheading: 'We create stunning, user-centric website designs that captivate visitors, build trust, and drive conversions for your business.',
@@ -116,7 +116,7 @@ export const servicePages = [
   {
     slug: 'graphics-design',
     title: 'Logo & Graphic Design',
-    metaDescription: 'Professional logo and graphic design services — brand identity, marketing materials, social media creatives. OW CreaTech makes your brand stand out.',
+    metaDescription: 'Professional logo and graphic design services — brand identity, marketing materials, social media creatives. One Klick makes your brand stand out.',
     hero: {
       headline: 'Logo & Graphic Design Services',
       subheading: 'We craft distinctive logos and compelling visual identities that make your brand instantly recognizable and memorable.',
@@ -154,7 +154,7 @@ export const servicePages = [
   {
     slug: 'digital-marketing',
     title: 'Digital Marketing',
-    metaDescription: 'Result-driven digital marketing services — SEO, PPC, social media, and content marketing. OW CreaTech grows your online presence and revenue.',
+    metaDescription: 'Result-driven digital marketing services — SEO, PPC, social media, and content marketing. One Klick grows your online presence and revenue.',
     hero: {
       headline: 'Result-Driven Digital Marketing Services',
       subheading: 'We grow your business online with data-driven SEO, PPC campaigns, social media marketing, and content strategies that deliver measurable ROI.',
@@ -192,7 +192,7 @@ export const servicePages = [
   {
     slug: 'mobile-app',
     title: 'Mobile App Development',
-    metaDescription: 'Professional iOS and Android mobile app development — React Native, Flutter, Swift, Kotlin. OW CreaTech delivers high-performance mobile solutions.',
+    metaDescription: 'Professional iOS and Android mobile app development — React Native, Flutter, Swift, Kotlin. One Klick delivers high-performance mobile solutions.',
     hero: {
       headline: 'iOS & Android Mobile App Development',
       subheading: 'We build high-performance native and cross-platform mobile apps for iOS and Android that users love — from concept to App Store launch.',
@@ -230,7 +230,7 @@ export const servicePages = [
   {
     slug: 'on-demand-app',
     title: 'On-Demand App Development',
-    metaDescription: 'Custom on-demand app development — Uber-like, food delivery, home services, logistics apps. OW CreaTech builds scalable marketplace solutions.',
+    metaDescription: 'Custom on-demand app development — Uber-like, food delivery, home services, logistics apps. One Klick builds scalable marketplace solutions.',
     hero: {
       headline: 'On-Demand App Development Services',
       subheading: 'We build powerful on-demand marketplace apps like Uber, Swiggy, and UrbanClap — connecting service providers with customers in real-time.',
@@ -268,7 +268,7 @@ export const servicePages = [
   {
     slug: 'ecommerce',
     title: 'E-Commerce Development',
-    metaDescription: 'Custom e-commerce website and app development with secure payments, inventory management, and seamless shopping experiences. OW CreaTech builds scalable online stores.',
+    metaDescription: 'Custom e-commerce website and app development with secure payments, inventory management, and seamless shopping experiences. One Klick builds scalable online stores.',
     hero: {
       headline: 'E-Commerce Development Services',
       subheading: 'We build powerful, conversion-optimized online stores and marketplaces — from custom storefronts to full-scale multi-vendor platforms.',

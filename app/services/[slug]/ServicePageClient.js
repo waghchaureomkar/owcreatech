@@ -114,7 +114,7 @@ export default function ServicePageClient({ service }) {
         <div className="container-custom">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Why Choose <span className="text-gradient">OW CreaTech</span>
+              Why Choose <span className="text-gradient">One Klick</span>
             </h2>
             <p className="text-gray-600 text-lg">What makes us the right partner for your project</p>
           </div>

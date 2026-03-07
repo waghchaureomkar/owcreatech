@@ -2,7 +2,7 @@ export const solutionPages = [
   {
     slug: 'restaurant-management',
     title: 'Restaurant Management System',
-    metaDescription: 'Custom restaurant management software — table management, menu, billing, inventory, and GST. OW CreaTech builds scalable restaurant solutions.',
+    metaDescription: 'Custom restaurant management software — table management, menu, billing, inventory, and GST. One Klick builds scalable restaurant solutions.',
     hero: {
       headline: 'Custom Restaurant Management System',
       subheading: 'Streamline your restaurant operations with our all-in-one cloud-based management system — from table orders to billing, inventory, and analytics.',
@@ -40,7 +40,7 @@ export const solutionPages = [
   {
     slug: 'crm',
     title: 'CRM Development',
-    metaDescription: 'Custom CRM software development — lead management, sales pipeline, customer tracking, and automation. OW CreaTech builds CRM solutions for growing businesses.',
+    metaDescription: 'Custom CRM software development — lead management, sales pipeline, customer tracking, and automation. One Klick builds CRM solutions for growing businesses.',
     hero: {
       headline: 'Custom CRM Software Development',
       subheading: 'Manage leads, track sales pipelines, and build stronger customer relationships with a fully custom CRM built around your business processes.',
@@ -78,7 +78,7 @@ export const solutionPages = [
   {
     slug: 'ecommerce',
     title: 'E-Commerce Software Development',
-    metaDescription: 'Custom e-commerce software development — online stores, marketplace platforms, B2B portals, and headless commerce. OW CreaTech builds scalable e-commerce solutions.',
+    metaDescription: 'Custom e-commerce software development — online stores, marketplace platforms, B2B portals, and headless commerce. One Klick builds scalable e-commerce solutions.',
     hero: {
       headline: 'Custom E-Commerce Software Development',
       subheading: 'Launch and scale your online business with a fully custom e-commerce platform — built for performance, conversions, and growth.',
@@ -116,7 +116,7 @@ export const solutionPages = [
   {
     slug: 'school-management',
     title: 'School Management Software',
-    metaDescription: 'Custom school management system — student records, attendance, fee management, online classes, and parent portal. OW CreaTech builds EdTech solutions.',
+    metaDescription: 'Custom school management system — student records, attendance, fee management, online classes, and parent portal. One Klick builds EdTech solutions.',
     hero: {
       headline: 'School Management Software System',
       subheading: 'Digitize your institution\'s operations with a comprehensive school management system — from admissions to results, fees to parent communication.',

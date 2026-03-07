@@ -11,7 +11,7 @@ export async function generateMetadata({ params }) {
   const service = getServiceBySlug(slug)
   if (!service) return {}
   return {
-    title: `${service.title} | OW CreaTech`,
+    title: `${service.title} | One Klick`,
     description: service.metaDescription,
   }
 }

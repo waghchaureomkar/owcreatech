@@ -5,8 +5,8 @@ import Link from 'next/link'
 import { jobOpenings } from '@/data/careers'
 
 export const metadata = {
-  title: 'Careers | OW CreaTech',
-  description: 'Join the OW CreaTech team! Explore exciting career opportunities in software development, design, digital marketing, and more.',
+  title: 'Careers | One Klick',
+  description: 'Join the One Klick team! Explore exciting career opportunities in software development, design, digital marketing, and more.',
 }
 
 const openings = jobOpenings.filter((job) => job.active)
@@ -48,7 +48,7 @@ export default function CareerPage() {
         <div className="container-custom">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Why Work at <span className="text-gradient">OW CreaTech</span>?
+              Why Work at <span className="text-gradient">One Klick</span>?
             </h2>
             <p className="text-gray-600 text-lg">We invest in our people as much as we invest in our products.</p>
           </div>
